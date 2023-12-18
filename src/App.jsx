@@ -6,12 +6,15 @@ import Products from "./components/Products";
 import Studio from "./components/Studio";
 import TechCards from "./components/TechCards";
 import Technology from "./components/Technology";
+import "./index.css";
 
 function App() {
   return (
     <div className="w-full min-h-screen">
-      <Header />
-      <Hero />
+      <div className="logo">
+        <Header />
+        <Hero />
+      </div>
       <Logos />
       <Technology />
       <TechCards />

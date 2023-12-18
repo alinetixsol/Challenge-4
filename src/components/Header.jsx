@@ -4,6 +4,7 @@ import logo from "../assets/ph_framer-logo.svg";
 import logo1 from "../assets/bi_cart.png";
 import logo2 from "../assets/Vector.svg";
 import useStore from "./Store";
+import "../index.css";
 
 export default function Header() {
   const [isMenuOpen, setMenuOpen] = useState(false);
@@ -61,7 +62,7 @@ export default function Header() {
         </div>
       </div>
       {isMenuOpen && (
-        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-50 hamberg1">
+        <div className="fixed top-0 left-0 w-full h-full bg-black bg-opacity-75 z-50 hamberg1 duration-1000">
           <div className="text-white p-8">
             <div
               className="cursor-pointer absolute top-4 right-4 text-[1.6rem]"

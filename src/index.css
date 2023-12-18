@@ -28,3 +28,12 @@
   overflow-y: scroll; /* Ensure vertical scroll is enabled */
   height: 300px; /* Set a fixed height or adjust as needed */
 }
+
+.logo {
+  background-image: url("./assets/Capture.png");
+  background-repeat: no-repeat;
+}
+
+.hamberg1 {
+  transition: all 0.9s ease-in ease-out;
+}

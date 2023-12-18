@@ -1,15 +1,26 @@
 import React from "react";
+import { motion } from "framer-motion";
 import Frame from "../assets/Frame.svg";
 import Frame1 from "../assets/Second.svg";
 import Frame2 from "../assets/Third.svg";
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 1.9, delay: 1.5 } },
+};
 
 export default function TechCards() {
   return (
     <>
       <div className="w-full h-auto px-[1rem] md:px-[8rem] py-[1rem] mb-8">
         <div className="max-w-full h-auto grid grid-cols-3 container gap-x-10 md:px-[0rem] px-[4rem]">
-          <div className="w-full h-auto md:col-span-1 col-span-3 mb-4">
-            <div className="border border-gray-300 rounded-3xl overflow-hidden px-[1.2rem] py-[1.2rem] cursor-pointer hover:bg-gray-100 hover:border-green-500 duration-1000 hover:shadow-2xl shadow-md">
+          <motion.div
+            className="w-full h-auto md:col-span-1 col-span-3 mb-4"
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div className="border border-gray-300 rounded-3xl overflow-hidden px-[1.2rem] py-[1.2rem] cursor-pointer hover:bg-gray-100 hover:border-green-500 duration-1000 hover:shadow-2xl shadow-md">
               <div className="mb-5">
                 <img className="w-[3rem]" src={Frame} alt="" />
               </div>
@@ -33,10 +44,15 @@ export default function TechCards() {
                   without a traditional financial institution.
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="w-full h-auto md:col-span-1 col-span-3 mb-4">
-            <div className="border border-gray-300 rounded-3xl overflow-hidden px-[1.2rem] py-[1.2rem] cursor-pointer hover:bg-gray-100 hover:border-green-500 duration-1000 hover:shadow-2xl shadow-md">
+            </motion.div>
+          </motion.div>
+          <motion.div
+            className="w-full h-auto md:col-span-1 col-span-3 mb-4"
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div className="border border-gray-300 rounded-3xl overflow-hidden px-[1.2rem] py-[1.2rem] cursor-pointer hover:bg-gray-100 hover:border-green-500 duration-1000 hover:shadow-2xl shadow-md">
               <div className="mb-5">
                 <img className="w-[3rem]" src={Frame1} alt="" />
               </div>
@@ -60,10 +76,15 @@ export default function TechCards() {
                   to take control of their data.
                 </div>
               </div>
-            </div>
-          </div>
-          <div className="w-full h-auto md:col-span-1 col-span-3 mb-4">
-            <div className="border border-gray-300 rounded-3xl overflow-hidden px-[1.2rem] py-[1.2rem] cursor-pointer hover:bg-gray-100 hover:border-green-500 duration-1000 hover:shadow-2xl shadow-md">
+            </motion.div>
+          </motion.div>
+          <motion.div
+            className="w-full h-auto md:col-span-1 col-span-3 mb-4"
+            variants={cardVariants}
+            initial="hidden"
+            animate="visible"
+          >
+            <motion.div className="border border-gray-300 rounded-3xl overflow-hidden px-[1.2rem] py-[1.2rem] cursor-pointer hover:bg-gray-100 hover:border-green-500 duration-1000 hover:shadow-2xl shadow-md">
               <div className="mb-5">
                 <img className="w-[3rem]" src={Frame2} alt="" />
               </div>
@@ -87,8 +108,8 @@ export default function TechCards() {
                   scared together.
                 </div>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         </div>
       </div>
     </>
